@@ -55,18 +55,18 @@ Along with house price (target) it consists of an ID, date, and 18 house feature
 1. The price (target) has many outliers, and it is positively skewed, which makes it hard to generate a proper model to predict the price. 
 
 2. From EDA, we understand several key findings:
-   (1) The living square footage is highly correlated with the price.
-   (2) The grade is highly correlated with the price
-   (3) The number of bathrooms positively correlated with the price.
-   (4) The view also determines the price.
-   (5) Since most people don't have a basement, so square footage above the ground is correlated with the living square footage.
-   (6) Usually, the neighborhood has a similar size of the living space.
-   (7) The age of the house doesn't have a clear trend contributing to the price.
-   (8) The house with the renovation can sell slightly higher than the houses they don't.
+   - (1) The living square footage is highly correlated with the price.
+   - (2) The grade is highly correlated with the price
+   - (3) The number of bathrooms positively correlated with the price.
+   - (4) The view also determines the price.
+   - (5) Since most people don't have a basement, so square footage above the ground is correlated with the living square footage.
+   - (6) Usually, the neighborhood has a similar size of the living space.
+   - (7) The age of the house doesn't have a clear trend contributing to the price.
+   - (8) The house with the renovation can sell slightly higher than the houses they don't.
  
-3. The linear model with or without the regularization performs similarily. With MinMaxScaling of 16 selected features, the $R^2$ score is around 65.8% accurate for the three linear models.
-   (1) Three models have a similar value of the intercept
-   (2) The sign and magnitude of the coefficient (of lasso regression) are generally matched with what we've observed in the EDA.
+3. The linear model with or without the regularization performs similarily. With MinMaxScaling of 16 selected features, the R^2 score is around 65.8% accurate for the three linear models.
+   - (1) Three models have a similar value of the intercept
+   - (2) The sign and magnitude of the coefficient (of lasso regression) are generally matched with what we've observed in the EDA.
 
 
 ## Future work:  
