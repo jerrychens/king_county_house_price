@@ -1,6 +1,6 @@
 # Predicting house price in King County, WA, USA
 
-Exploratory data analysis and price prediction on the King county (WA) house price data set. The complete analysis can be found in this [notebook](Final_Jerry.ipynb).
+Exploratory data analysis and price prediction on the King County (WA) house price data set. The complete analysis can be found in this [notebook](Final_Jerry.ipynb).
 
 ## Price heat map
 The heat map is rendered by `folium`, which is not natively supported by GitHub. If you want to view the dynamic heat map, please use [this link](https://nbviewer.jupyter.org/github/jerrychens/king_county_house_price/blob/master/Final_Jerry.ipynb) supported by nbviewer.
@@ -15,6 +15,7 @@ This is a screenshot of the heat map.
 
 Other common packages:
 `pandas`, `numpy`, `seaborn`, `statsmodels.api`, `sklearn`, `matplotlib`
+
 
 ## Dataset Description
 
@@ -48,21 +49,27 @@ Along with house price (target) it consists of an ID, date, and 18 house feature
 20. `Sqft_living15`: The square footage of interior housing living space for the nearest 15 neighbors
 21. `Sqft_lot15`: The square footage of the land lots of the nearest 15 neighbors
 
+
 ## Conclusions
 
 1. The price (target) has many outliers, and it is positively skewed, which makes it hard to generate a proper model to predict the price. 
+
+
 2. From EDA, we understand several key findings:
- - (1) The living square footage is highly correlated with the price.
- - (2) The grade is highly correlated with the price
- - (3) The number of bathrooms positively correlated with the price.
- - (4) The view also determines the price.
- - (5) Since most people don't have a basement, so square footage above the ground is correlated with the living square footage.
- - (6) Usually, the neighborhood has a similar size of the living space.
- - (7) The age of the house doesn't have a clear trend contributing to the price.
- - (8) The house with the renovation can sell slightly higher than the houses they don't.
-3. The linear model with or without the regularization performs similarily. With MinMaxScaling of 16 selected features, the R^2 score is around 65.8% accurate for three linear models.
- - (1) Three models have a similar value of the intercept
- - (2) The sign and magnitude of the coefficient (of lasso regression) are generally matched with what we've observed in the EDA.
+  - (1) The living square footage is highly correlated with the price.
+  - (2) The grade is highly correlated with the price
+  - (3) The number of bathrooms positively correlated with the price.
+  - (4) The view also determines the price.
+  - (5) Since most people don't have a basement, so square footage above the ground is correlated with the living square footage.
+  - (6) Usually, the neighborhood has a similar size of the living space.
+  - (7) The age of the house doesn't have a clear trend contributing to the price.
+  - (8) The house with the renovation can sell slightly higher than the houses they don't.
+ 
+ 
+3. The linear model with or without the regularization performs similarily. With MinMaxScaling of 16 selected features, the $R^2$ score is around 65.8% accurate for the three linear models.
+  - (1) Three models have a similar value of the intercept
+  - (2) The sign and magnitude of the coefficient (of lasso regression) are generally matched with what we've observed in the EDA.
+
 
 ## Future work:  
 Base on the above findings, we found out that linear models have limitations to capture the trend of the price. Although it gave us a decent price prediction (about 65% accurate), it cannot capture the non-linearity of the nature of the housing price. The score can be improved if we try non-linear models such as Random Forest, XGboost, Neural Network, etc.
