@@ -1,9 +1,9 @@
-# Predicting house price in King County, WA
+# Predicting house price in King County, WA, USA
 
-Exploratory data analysis and price prediction on king county house price data set. The complete analysis can be found in this [notebook](Final_Jerry.ipynb).
+Exploratory data analysis and price prediction on the King county (WA) house price data set. The complete analysis can be found in this [notebook](Final_Jerry.ipynb).
 
 ## Price heat map
-The heat map is rendered by `folium`, which is not natively supported by GitHub. If you want to view the dynamic heat map, please use this [link](https://nbviewer.jupyter.org/github/jerrychens/king_county_house_price/blob/master/Final_Jerry.ipynb) supported by nbviewer.
+The heat map is rendered by `folium`, which is not natively supported by GitHub. If you want to view the dynamic heat map, please use [this LINK](https://nbviewer.jupyter.org/github/jerrychens/king_county_house_price/blob/master/Final_Jerry.ipynb) supported by nbviewer.
 
 This is a screenshot of the heat map.
 ![alt text](heatmap.PNG "heat map screenshot")
